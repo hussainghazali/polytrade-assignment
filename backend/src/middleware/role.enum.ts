@@ -1,0 +1,3 @@
+export enum Role {
+  POLYTRADE_CUSTOMER = 'POLYTRADE_CUSTOMER',
+}
