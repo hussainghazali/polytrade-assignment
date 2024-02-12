@@ -12,10 +12,10 @@ async function bootstrap() {
   // Serve static files from the 'uploads' directory
   app.use('/uploads', express.static(path.join(__dirname, '..', 'uploads')));
   const config = new DocumentBuilder()
-    .setTitle('FinSight API')
-    .setDescription('The backend api to connect with the FinSight app')
+    .setTitle('POLYTRADE ASSIGNMENT API')
+    .setDescription('The backend api to connect with the POLYTRADE app')
     .setVersion('1.0')
-    .addTag('finSight')
+    .addTag('POLYTRADE')
     .addBearerAuth()
     .build();
 
