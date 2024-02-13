@@ -104,10 +104,38 @@ export class MagazinesService {
   }
 
   async findAll() {
-    const MagazinesPromise = this.magazinesRepository.find({
+    const MagazinePromise = this.magazinesRepository.find({
       order: { createdAt: 'DESC' },
     });
-    return MagazinesPromise;
+
+    const [Magazines] = await Promise.all([MagazinePromise]);
+
+    const MagazinesWithData = Magazines.map(async (Magazine) => {
+      const file = await this.filesService.findOne(Magazine.fileId);
+      let fileURL: any = null;
+
+      if (file?.data) {
+        fileURL = this.filesService.generateFileURL(file);
+      }
+
+      const { id, title, description, price, createdAt, updatedAt, deletedAt } = Magazine;
+
+      return {
+        id,
+        title,
+        description,
+        price,
+        fileURL,
+        createdAt,
+        updatedAt,
+        deletedAt,
+      };
+    });
+
+    const formattedMagazines = await Promise.all(MagazinesWithData);
+
+    return formattedMagazines;
+  
   }
 
   async deleteById(

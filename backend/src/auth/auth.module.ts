@@ -5,11 +5,10 @@ import { User } from 'src/users/entities/user.entity';
 import { JwtModule } from '@nestjs/jwt';
 import { APP_GUARD } from '@nestjs/core';
 import { AuthGuard } from './auth.guard';
-import { Otp } from './entities/otp.entity';
 
 @Module({
   imports: [
-    TypeOrmModule.forFeature([Otp, User]),
+    TypeOrmModule.forFeature([User]),
     JwtModule.register({
       global: true,
       secret: process.env.JWT_SECRET,

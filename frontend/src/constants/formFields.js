@@ -21,47 +21,47 @@ const loginFields=[
     }
 ]
 
-const signupFields=[
+const signupFields = [
     {
-        labelText:"Username",
-        labelFor:"username",
-        id:"username",
-        name:"username",
-        type:"text",
-        autoComplete:"username",
-        isRequired:true,
-        placeholder:"Username"   
+        labelText: "Email address",
+        labelFor: "email-address",
+        id: "email-address",
+        name: "email",
+        type: "email",
+        autoComplete: "email",
+        isRequired: true,
+        placeholder: "Email address"
     },
     {
-        labelText:"Email address",
-        labelFor:"email-address",
-        id:"email-address",
-        name:"email",
-        type:"email",
-        autoComplete:"email",
-        isRequired:true,
-        placeholder:"Email address"   
+        labelText: "First Name",
+        labelFor: "first-name",
+        id: "first-name",
+        name: "firstName",
+        type: "text",
+        autoComplete: "given-name",
+        isRequired: true,
+        placeholder: "First Name"
     },
     {
-        labelText:"Password",
-        labelFor:"password",
-        id:"password",
-        name:"password",
-        type:"password",
-        autoComplete:"current-password",
-        isRequired:true,
-        placeholder:"Password"   
+        labelText: "Last Name",
+        labelFor: "last-name",
+        id: "last-name",
+        name: "lastName",
+        type: "text",
+        autoComplete: "family-name",
+        isRequired: true,
+        placeholder: "Last Name"
     },
     {
-        labelText:"Confirm Password",
-        labelFor:"confirm-password",
-        id:"confirm-password",
-        name:"confirm-password",
-        type:"password",
-        autoComplete:"confirm-password",
-        isRequired:true,
-        placeholder:"Confirm Password"   
-    }
-]
+        labelText: "Password",
+        labelFor: "password",
+        id: "password",
+        name: "password",
+        type: "password",
+        autoComplete: "new-password",
+        isRequired: true,
+        placeholder: "Password"
+    },
+];
 
 export {loginFields,signupFields}

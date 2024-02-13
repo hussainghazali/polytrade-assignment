@@ -68,7 +68,7 @@ export class FilesService {
     fs.writeFileSync(filePath, fileBuffer);
 
     // Generate a URL to access the file
-    const serverURL = 'https://guardlink-api.onrender.com'; // Replace with your server URL
+    const serverURL = 'http:localhost:3001'; // Replace with your server URL
     const fileURL = `${serverURL}/uploads/${data.filename}`;
 
     return fileURL;
