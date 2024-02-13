@@ -31,7 +31,7 @@ export default function Login() {
             email: loginState['email-address'],
             password: loginState['password']
         };
-
+    
         const endpoint = 'http://localhost:3001/users/login';
         fetch(endpoint, {
             method: 'POST',
@@ -47,6 +47,9 @@ export default function Login() {
                 return response.json();
             })
             .then(data => {
+                // Set token in session storage
+                localStorage.setItem('accessToken', data.access_token);
+                
                 setShowToast(true); // Show the toast
                 setTimeout(() => {
                     setShowToast(false); // Hide the toast after 3 seconds
@@ -57,7 +60,7 @@ export default function Login() {
                 setError(error.message); // Set error message
                 console.error(error);
             });
-    }
+    }    
 
     // Render the Navigate component if redirectToLogin is true
     if (redirectToDashboard) {
