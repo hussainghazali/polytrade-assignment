@@ -13,9 +13,9 @@ export class Magazine {
 
   @Column()
   description: string;
-
-  @Column({ type: 'decimal', precision: 10, scale: 2 })
-  price: number;
+  
+  @Column({ nullable: true })
+  price: string;
 
   @JoinColumn({ name: "fileId" })
   @OneToOne(() => File, {

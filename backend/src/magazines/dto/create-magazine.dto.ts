@@ -20,9 +20,9 @@ export class CreateMagazineDto {
 
   @ApiProperty({ 
     description: 'Price of the magazine',
-    example: 9.99 
+    example: '9.99' 
   })
   @IsNotEmpty()
-  @IsNumber()
-  price: number;
+  @IsString()
+  price: string;
 }
