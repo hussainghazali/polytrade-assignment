@@ -9,6 +9,7 @@ import LoginPage from './pages/Login';
 import DashboardPage from './pages/Dashboard';
 import ProfilePage from './pages/Profile';
 import MagazinePage from './pages/Magazine';
+import SubscriptionPage from './pages/Subscription';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/dashboard" element={<DashboardPage/>} />
             <Route path="/profile" element={<ProfilePage/>} />
             <Route path="/magazine" element={<MagazinePage/>} />
+            <Route path="/subscription" element={<SubscriptionPage/>} />
         </Routes>
       </BrowserRouter>
     </div>

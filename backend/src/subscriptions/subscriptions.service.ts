@@ -81,6 +81,7 @@ export class SubscriptionsService {
 
     const subscriptions = await this.subscriptionsRepository.find({
       where: { userId },
+      relations: ['magazine'],
       order: { createdAt: 'DESC' },
     });
 
@@ -88,6 +89,8 @@ export class SubscriptionsService {
 
     const subscriptionsWithData = await Promise.all(
       subscriptionData.map(async (subscription) => {
+
+        console.log('SUBSCRIPTION', subscription);
 
         const { id, userId, magazineId, startDate, endDate, cancelled, createdAt, updatedAt } = subscription;
 
@@ -98,6 +101,7 @@ export class SubscriptionsService {
           startDate,
           endDate,
           cancelled,
+          magazine: subscription.magazine.title,
           createdAt,
           updatedAt,
         };
