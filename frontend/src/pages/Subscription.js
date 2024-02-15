@@ -1,13 +1,13 @@
 // DashboardPage.js
-import Magazine from "../components/Magazine";
+import Subscription from "../components/Subscription";
 import Sidebar from "../components/Sidebar"; // Correct import
 
-export default function MagazinePage() {
+export default function SubscriptionPage() {
   return (
     <div>
      <Sidebar />
     <>
-      <Magazine />
+      <Subscription />
     </>
     </div>
   );
