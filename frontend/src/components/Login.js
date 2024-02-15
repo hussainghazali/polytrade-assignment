@@ -64,7 +64,7 @@ export default function Login() {
 
     // Render the Navigate component if redirectToLogin is true
     if (redirectToDashboard) {
-        return <Navigate to="/dashboard" replace={true} />;
+        return <Navigate to="/profile" replace={true} />;
     }
 
     return (
