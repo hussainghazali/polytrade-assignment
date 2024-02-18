@@ -1,16 +1,20 @@
 import React, { useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const LogoutPage = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    // Remove access token from local storage
-    localStorage.removeItem('accessToken');
-    localStorage.removeItem('access_token');
-    // Redirect to the homepage
-    history.push('http://localhost:3000');
-  }, [history]);
+    const logout = async () => {
+      // Remove access token from local storage
+      localStorage.removeItem('accessToken');
+      localStorage.removeItem('access_token');
+      // Redirect to the homepage
+      navigate('/');
+    };
+
+    logout();
+  }, [navigate]);
 
   return (
     <div>
