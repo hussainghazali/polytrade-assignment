@@ -1,6 +1,5 @@
-// DashboardPage.js
 import Subscription from "../components/Subscription";
-import Sidebar from "../components/Sidebar"; // Correct import
+import Sidebar from "../components/Sidebar";
 
 export default function SubscriptionPage() {
   return (

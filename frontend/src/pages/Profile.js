@@ -1,6 +1,5 @@
-// DashboardPage.js
 import Profile from "../components/Profile";
-import Sidebar from "../components/Sidebar"; // Correct import
+import Sidebar from "../components/Sidebar"; 
 
 export default function ProfilePage() {
   return (

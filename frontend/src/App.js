@@ -6,10 +6,10 @@ import {
 } from "react-router-dom";
 import SignupPage from './pages/Signup';
 import LoginPage from './pages/Login';
-import DashboardPage from './pages/Dashboard';
 import ProfilePage from './pages/Profile';
 import MagazinePage from './pages/Magazine';
 import SubscriptionPage from './pages/Subscription';
+import LogoutPage from './pages/Logout';
 
 function App() {
   return (
@@ -19,10 +19,10 @@ function App() {
         <Routes>
             <Route path="/" element={<LoginPage/>} />
             <Route path="/signup" element={<SignupPage/>} />
-            <Route path="/dashboard" element={<DashboardPage/>} />
             <Route path="/profile" element={<ProfilePage/>} />
             <Route path="/magazine" element={<MagazinePage/>} />
             <Route path="/subscription" element={<SubscriptionPage/>} />
+            <Route path="/logout" element={<LogoutPage/>} />
         </Routes>
       </BrowserRouter>
     </div>
